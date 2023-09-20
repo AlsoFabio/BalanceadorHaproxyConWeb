@@ -10,18 +10,15 @@ services:
     depends_on:
       - webber1
       - webber2
-    # environment:
-    #   - webber1
-    #   - webber2
 
   webber1:
     build:
       context: ./web1
     environment:
-      - CONTENEDOR="1"
+      - CONTENEDOR=1
 
   webber2:
     build:
       context: ./web1
     environment:
-      - CONTENEDOR="2"
+      - CONTENEDOR=2
